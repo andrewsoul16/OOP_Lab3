@@ -128,8 +128,21 @@ namespace OOP_Lab3
         public void QuickSort()
         {
             int pivot = ints.Length / 2;
+            int start = 0;
+            int end = ints.Length;
+            int temp;
 
-
+            while (start < end)
+            {
+                if (ints[start] > ints[end])
+                {
+                    temp = ints[end];
+                    ints[end] = ints[start];
+                    ints[start] = temp;
+                }
+                start++;
+                end--;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
