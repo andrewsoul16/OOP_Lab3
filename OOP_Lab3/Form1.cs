@@ -125,11 +125,12 @@ namespace OOP_Lab3
             }
         }
 
-        public void QuickSort()
+        int start = 0;
+        int end;
+
+        public void QuickSort(int start,int end)
         {
-            int pivot = ints.Length / 2;
-            int start = 0;
-            int end = ints.Length;
+            int pivot = end / 2;
             int temp;
 
             while (start < end)
@@ -143,6 +144,11 @@ namespace OOP_Lab3
                 start++;
                 end--;
             }
+
+            start = 0;
+
+
+            //QuickSort()
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -161,7 +167,7 @@ namespace OOP_Lab3
             //SelectionSort();
             //BubbleSort();
             //ShellSort();
-            QuickSort();
+            //QuickSort();
 
             for (int i = 0; i < 15; i++)
             {
